@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../../components/utils/api';
 import { secToString } from '../utils/secToString';
+import './Article.css';
 
 export const Article = ({ children, id }) => {
   const [articleData, setArticleData] = React.useState({});
@@ -34,7 +35,8 @@ export const Article = ({ children, id }) => {
         </header>
         <main className="news-container">
           <p className="news-score">News score is: {articleData.score}</p>
-          <p className="news-score">
+          <p className="news-author">Author: {articleData.by}</p>
+          <p className="news-created">
             Created at {secToString(articleData.time)}
           </p>
         </main>

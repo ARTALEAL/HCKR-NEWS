@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link, useParams } from 'react-router-dom';
-
+import './SingleNews.css';
 import { api } from '../utils/api';
 import CommentsList from '../CommentsList/CommentsList';
 
@@ -35,19 +35,30 @@ export const SingleNews = () => {
   //   const handleUpdateNews = () => {
   //     fetchData();
   //   };
-  console.log(articleData);
   return (
     <>
       <h1>Hacker News</h1>
-      <section>
+      <section className="single-news">
         <h3>{articleData.title}</h3>
-        <a href={articleData.url} target="_blank" rel="noreferrer">
-          Go to original
-        </a>
-        <br />
-        <Link to="/">Back to news list</Link>
+        <div className="single-news-container">
+          <p>
+            <a
+              className="news-link button"
+              href={articleData.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Go to original news page
+            </a>
+          </p>
+          <p>
+            <Link className="news-link button" to="/">
+              Back
+            </Link>
+          </p>
+        </div>
         {articleData.kids && articleData.descendants > 0 ? (
-          <p>`${articleData.descendants} comments`</p>
+          <p>{articleData.descendants} comments</p>
         ) : (
           <p>0 comments</p>
         )}

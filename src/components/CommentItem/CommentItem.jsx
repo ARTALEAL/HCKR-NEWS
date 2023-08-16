@@ -1,7 +1,7 @@
 import React from 'react';
 
 import CommentsList from '../CommentsList/CommentsList';
-
+import './CommentItem.css';
 import { api } from '../utils/api';
 
 import parse from 'html-react-parser';
@@ -38,10 +38,13 @@ export const CommentItem = ({ data }) => {
   const commentsItem = {
     paddingTop: 5,
     paddingBottom: 5,
+    textalign: 'left',
   };
 
   return commentData.deleted ? (
-    <li style={commentsItem}>Comment has been deleted</li>
+    <li className="comment" style={commentsItem}>
+      Comment has been deleted
+    </li>
   ) : (
     <li style={commentsItem}>
       {isLoadingData && <p>Loading...</p>}

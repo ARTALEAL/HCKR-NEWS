@@ -1,0 +1,23 @@
+.single-news {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  align-items: center;
+}
+
+.single-news-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: black;
+}
