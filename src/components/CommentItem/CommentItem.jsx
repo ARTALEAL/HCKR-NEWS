@@ -38,7 +38,6 @@ export const CommentItem = ({ data }) => {
   const commentsItem = {
     paddingTop: 5,
     paddingBottom: 5,
-    textalign: 'left',
   };
 
   return commentData.deleted ? (

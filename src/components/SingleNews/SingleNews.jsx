@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { UpdateNewsButton } from '../UpdateNewsButton/UpdateNewsButton';
 import { Link, useParams } from 'react-router-dom';
 import './SingleNews.css';
 import { api } from '../utils/api';
@@ -32,15 +32,20 @@ export const SingleNews = () => {
     fetchData();
   }, [fetchData]);
 
-  //   const handleUpdateNews = () => {
-  //     fetchData();
-  //   };
+  const handleUpdateNews = () => {
+    fetchData();
+  };
   return (
     <>
       <h1>Hacker News</h1>
       <section className="single-news">
         <h3>{articleData.title}</h3>
         <div className="single-news-container">
+          <UpdateNewsButton
+            text="Update comments"
+            isLoading={isLoadingData}
+            onClick={handleUpdateNews}
+          />
           <p>
             <a
               className="news-link button"
@@ -48,7 +53,7 @@ export const SingleNews = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Go to original news page
+              Go to news page
             </a>
           </p>
           <p>

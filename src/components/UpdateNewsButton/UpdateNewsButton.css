@@ -1,0 +1,16 @@
+.refresh-button {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  max-width: 150px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.refresh-button:hover {
+  box-shadow: 1px 1px 5px black;
+}
