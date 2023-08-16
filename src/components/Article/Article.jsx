@@ -34,10 +34,14 @@ export const Article = ({ children, id }) => {
           <h1>{articleData.title}</h1>
         </header>
         <main className="news-container">
-          <p className="news-score">News score is: {articleData.score}</p>
-          <p className="news-author">Author: {articleData.by}</p>
+          <p className="news-score">
+            <b>News score is:</b> {articleData.score}
+          </p>
+          <p className="news-author">
+            <b>Author:</b> {articleData.by}
+          </p>
           <p className="news-created">
-            Created at {secToString(articleData.time)}
+            <b>Created at</b> {secToString(articleData.time)}
           </p>
         </main>
       </Link>

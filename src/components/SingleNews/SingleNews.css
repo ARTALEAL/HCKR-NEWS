@@ -4,6 +4,11 @@
   border: 1px solid black;
   border-radius: 5px;
   margin: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(179, 170, 2, 1) 0%,
+    rgba(194, 255, 0, 1) 100%
+  );
 }
 
 .single-news-container {

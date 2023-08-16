@@ -1,3 +1,4 @@
-ul {
+.comments-list {
   list-style: none;
+  border: 3px outset gray;
 }

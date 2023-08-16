@@ -5,4 +5,9 @@
   border-radius: 5px;
   margin: 20px;
   align-items: center;
+  background: linear-gradient(
+    209deg,
+    rgba(139, 139, 136, 1) 0%,
+    rgba(63, 64, 62, 1) 100%
+  );
 }

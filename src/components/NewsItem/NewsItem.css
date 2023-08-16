@@ -8,6 +8,11 @@
   padding: 20px;
   box-shadow: 2px 2px 4px black;
   transition: transform 0.5s;
+  background: linear-gradient(
+    200deg,
+    rgba(179, 170, 2, 1) 0%,
+    rgba(194, 255, 0, 1) 100%
+  );
 }
 
 .list-item:hover {

@@ -1,13 +1,25 @@
 import './Main.css';
 import { NewsList } from '../NewsList/NewsList';
-
-export default function Main({ news }) {
+import { UpdateNewsButton } from '../UpdateNewsButton/UpdateNewsButton';
+import { fetchNewsIds } from '../../slices/newsSlice';
+export default function Main({ news, ids, dispatch }) {
+  function handleClickUpdateButton() {
+    dispatch(fetchNewsIds());
+  }
   return (
     <>
-      <h1>Hacker News</h1>
+      <header>
+        <h1>Hacker News</h1>
+        <UpdateNewsButton
+          text="Update news"
+          isLoading={ids}
+          onClick={handleClickUpdateButton}
+        />
+      </header>
       <section className="elements" aria-label="News section">
         <NewsList data={news}></NewsList>
       </section>
+      <footer>Hacker News</footer>
     </>
   );
 }

@@ -6,17 +6,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchNewsIds,
   selectNewsIds,
-  selectNewsIdsError,
   selectNewsIdsStatus,
 } from '../../slices/newsSlice';
 import { SingleNews } from '../SingleNews/SingleNews';
+import NotFound from '../NotFound/NotFound';
 
 function App() {
   const dispatch = useDispatch();
-
   const newsIds = useSelector(selectNewsIds);
   const newsIdsStatus = useSelector(selectNewsIdsStatus);
-  const newsIdsError = useSelector(selectNewsIdsError);
 
   React.useEffect(() => {
     const updateIds = setTimeout(() => {
@@ -35,8 +33,12 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Main news={newsIds} />} />
+        <Route
+          path="/"
+          element={<Main news={newsIds} ids={newsIds} dispatch={dispatch} />}
+        />
         <Route exact path="/news/:newsId" element={<SingleNews />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

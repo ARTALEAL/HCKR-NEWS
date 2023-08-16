@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import './SingleNews.css';
 import { api } from '../utils/api';
 import CommentsList from '../CommentsList/CommentsList';
+import { secToString } from '../utils/secToString';
 
 export const SingleNews = () => {
   const { newsId } = useParams();
@@ -37,7 +38,9 @@ export const SingleNews = () => {
   };
   return (
     <>
-      <h1>Hacker News</h1>
+      <header>
+        <h1>Hacker News</h1>
+      </header>
       <section className="single-news">
         <h3>{articleData.title}</h3>
         <div className="single-news-container">
@@ -62,6 +65,15 @@ export const SingleNews = () => {
             </Link>
           </p>
         </div>
+        <div>
+          <p>
+            <b>Author: </b>
+            {articleData.by}
+          </p>
+          <p>
+            <b>Created:</b> {secToString(articleData.time)}
+          </p>
+        </div>
         {articleData.kids && articleData.descendants > 0 ? (
           <p>{articleData.descendants} comments</p>
         ) : (
@@ -69,6 +81,7 @@ export const SingleNews = () => {
         )}
         {articleData.kids && <CommentsList data={articleData.kids} />}
       </section>
+      <footer>Hacker News</footer>
     </>
   );
 };
