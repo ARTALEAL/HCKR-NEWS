@@ -1,0 +1,9 @@
+.list-item {
+  list-style: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  padding: 20px;
+}

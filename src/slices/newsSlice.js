@@ -4,7 +4,6 @@ import { api } from '../components/utils/api';
 
 export const fetchNewsIds = createAsyncThunk('news/fetchNewsIds', async () => {
   const response = await api.getNewStoriesIds();
-  console.log(response);
   return response;
 });
 
