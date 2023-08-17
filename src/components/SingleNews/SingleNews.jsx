@@ -38,9 +38,6 @@ export const SingleNews = () => {
   };
   return (
     <>
-      <header>
-        <h1>Hacker News</h1>
-      </header>
       <section className="single-news">
         <h3>{articleData.title}</h3>
         <div className="single-news-container">
@@ -81,7 +78,6 @@ export const SingleNews = () => {
         )}
         {articleData.kids && <CommentsList data={articleData.kids} />}
       </section>
-      <footer>Hacker News</footer>
     </>
   );
 };

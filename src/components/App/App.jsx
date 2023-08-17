@@ -10,6 +10,8 @@ import {
 } from '../../slices/newsSlice';
 import { SingleNews } from '../SingleNews/SingleNews';
 import NotFound from '../NotFound/NotFound';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -32,6 +34,7 @@ function App() {
 
   return (
     <div className="app">
+      <Header ids={newsIds} dispatch={dispatch} />
       <Routes>
         <Route
           path="/"
@@ -40,6 +43,7 @@ function App() {
         <Route exact path="/news/:newsId" element={<SingleNews />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

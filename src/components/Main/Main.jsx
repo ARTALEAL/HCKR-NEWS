@@ -8,18 +8,14 @@ export default function Main({ news, ids, dispatch }) {
   }
   return (
     <>
-      <header>
-        <h1>Hacker News</h1>
-        <UpdateNewsButton
-          text="Update news"
-          isLoading={ids}
-          onClick={handleClickUpdateButton}
-        />
-      </header>
+      <UpdateNewsButton
+        text="Update news"
+        isLoading={ids}
+        onClick={handleClickUpdateButton}
+      />
       <section className="elements" aria-label="News section">
         <NewsList data={news}></NewsList>
       </section>
-      <footer>Hacker News</footer>
     </>
   );
 }
