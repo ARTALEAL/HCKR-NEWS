@@ -31,9 +31,9 @@ export const Article = ({ children, id }) => {
     <article>
       <Link className="news-link" to={`/news/${articleData.id}`}>
         <header>
-          <h1>{articleData.title}</h1>
+          <h2>{articleData.title}</h2>
         </header>
-        <main className="news-container">
+        <div className="news-container">
           <p className="news-score">
             <b>News score is:</b> {articleData.score}
           </p>
@@ -43,7 +43,7 @@ export const Article = ({ children, id }) => {
           <p className="news-created">
             <b>Created at</b> {secToString(articleData.time)}
           </p>
-        </main>
+        </div>
       </Link>
       {children}
     </article>

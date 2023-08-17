@@ -14,7 +14,9 @@ export default function Main({ news, ids, dispatch }) {
         onClick={handleClickUpdateButton}
       />
       <section className="elements" aria-label="News section">
-        <NewsList data={news}></NewsList>
+        <main>
+          <NewsList data={news}></NewsList>
+        </main>
       </section>
     </>
   );
