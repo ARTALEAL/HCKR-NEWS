@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/HCKR-NEWS/static/css/main.e59999d4.css",
+    "main.js": "/HCKR-NEWS/static/js/main.845ab670.js",
+    "static/js/787.48e85065.chunk.js": "/HCKR-NEWS/static/js/787.48e85065.chunk.js",
+    "index.html": "/HCKR-NEWS/index.html",
+    "main.e59999d4.css.map": "/HCKR-NEWS/static/css/main.e59999d4.css.map",
+    "main.845ab670.js.map": "/HCKR-NEWS/static/js/main.845ab670.js.map",
+    "787.48e85065.chunk.js.map": "/HCKR-NEWS/static/js/787.48e85065.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e59999d4.css",
+    "static/js/main.845ab670.js"
+  ]
+}
