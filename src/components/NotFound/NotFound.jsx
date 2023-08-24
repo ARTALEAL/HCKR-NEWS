@@ -11,7 +11,7 @@ function NotFound() {
       <main className="notfound-main">
         <h3>Let's Go back to the News!</h3>
         <p>
-          <Link className="news-link button" to="/">
+          <Link className="news-link button" to="/HCKR-NEWS">
             Back
           </Link>
         </p>

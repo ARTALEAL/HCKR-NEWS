@@ -29,7 +29,7 @@ export const Article = ({ children, id }) => {
     <h2>Please wait, we are loading news</h2>
   ) : (
     <article>
-      <Link className="news-link" to={`/news/${articleData.id}`}>
+      <Link className="news-link" to={`/HCKR-NEWS/news/${articleData.id}`}>
         <header>
           <h2>{articleData.title}</h2>
         </header>

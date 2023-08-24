@@ -37,10 +37,10 @@ function App() {
       <Header ids={newsIds} dispatch={dispatch} />
       <Routes>
         <Route
-          path="/"
+          path="/HCKR-NEWS"
           element={<Main news={newsIds} ids={newsIds} dispatch={dispatch} />}
         />
-        <Route exact path="/news/:newsId" element={<SingleNews />} />
+        <Route exact path="/HCKR-NEWS/news/:newsId" element={<SingleNews />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

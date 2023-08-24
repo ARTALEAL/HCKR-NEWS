@@ -57,7 +57,7 @@ export const SingleNews = () => {
             </a>
           </p>
           <p>
-            <Link className="news-link button" to="/">
+            <Link className="news-link button" to="/HCKR-NEWS">
               Back
             </Link>
           </p>
