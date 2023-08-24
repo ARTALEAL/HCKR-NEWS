@@ -38,3 +38,7 @@
 - Роутинг выполнен с использованием React Router v6.
 - Пакетный менеджер `npm`
 - Приложение запускается по адресу `localhost:3000` командой `npm start`
+
+## Деплой проекта
+
+- [HACKER-NEWS](https://artaleal.github.io/HCKR-NEWS/)
